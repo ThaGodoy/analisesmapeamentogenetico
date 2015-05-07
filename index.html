@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Análises do Mapeamento Genético by ThaGodoy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Análises do Mapeamento Genético</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/ThaGodoy/analisesmapeamentogenetico" class="btn">View on GitHub</a>
+      <a href="https://github.com/ThaGodoy/analisesmapeamentogenetico/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ThaGodoy/analisesmapeamentogenetico/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><strong>Passos da análise do mapeamento genético</strong></p>
+
+<p>Neste estudo 287 indivíduos de uma população F2 de <em>Mimulus</em> <em>guttatus</em> foram utilizados para realizar o mapeamento genético com base em seus 418 marcadores genotipados. </p>
+
+<p>Com o objetivo de construir uma mapa genético de ligação no RStudio (Version 0.98.1103) foi utilizado o <em>software</em> OneMap (Margarido et al., 2007).</p>
+
+<p>Inicialmente uma análise de segregação mendeliana foi realizada, com o objetivo de separar os marcadores em dominantes e codominantes. Para tanto, foi realizado o teste de qui-quadrado com correção de Bonferroni (devido aos vários testes). 
+Sendo assim, 17 marcadores foram removidos dentro dos marcadores dominantes e 45 dentro dos marcadores codominantes. Sendo eles:</p>
+
+<blockquote>
+<p>Dominant.Bonferroni
+ [1]  28  38  40  46  52  66  82  83  88 124 131 136 142 153 187 189 204</p>
+
+<p>Codominant.Bonferroni
+ [1]   2   7  18  22  24  31  32  33  37  45  57  59  61  62  70  71  72  81  82  83
+[21]  89 100 102 103 115 118 120 123 130 132 134 141 148 150 156 165 172 174 175 177
+[41] 186 188 189 191 201</p>
+</blockquote>
+
+<p>Em seguida foram estipulados os grupos de ligação utilizando a análise de dois pontos (Wu et al., 2002) com base nos 418 marcadores. Foi utilizado LOD <em>score</em> de 6 e a frequência de recombinação foi de 0,314, que foi estipulada com base na distância máxima estabelecida em 37 cM. </p>
+
+<p>No total, 12 grupos foram gerados utilizando 411 marcadores, ou seja, 7 marcadores foram excluídos (AA208 BB327 BB279 CA392 BC135 CC371 MgSTS23).</p>
+
+<p>Group 1 : 20 markers
+    AA461 AA341 AA173C BA416 BA374 BA214 BA153 BA129 CA174 BD270 CA389C AAT225 AAT267 BC194C CC447 CC138 AAT333 MgSTS98 MgSTS212 MgSTS336 </p>
+
+<p>Group 2 : 22 markers
+    AA420 BA301 BA172 BA125 CA279 CA228 CB280 BD175 BD99 BC167 BC126 CC132 CC130 CC385C MgSTS316 MgSTS49 MgSTS106 MgSTS56 MgSTS457 MgSTS513 MgSTS589 MgSTS565 </p>
+
+<p>Group 3 : 87 markers
+    AA404 AA361 AA280 AA100 BA497 BA384 BA220 BA75 BB281 BB259 BB190 BB122 BB119 BB102 CA289 CA238 CA220 CA198 CA131 CA96 CB309 CB246 CB187 CB173 CB166 CB162 CB156 BD433 BD429 BD292 BD286 BD263 BD209 BD170 BD68 AA153C CA258C BB103C AAT261 AAT278 AAT374 AAT372 AG19 BC498 BC379 BC334 BC131 BC70 BC586C BC128C CC392 CC387 CC378 CC330 CC286 CC283 AAT312 AAT283 MgSTS27 MgSTS308 MgSTS43 MgSTS48 MgSTS70 MgSTS474 MgSTS95 MgSTS50 MgSTS75 MgSTS388 MgSTS332 MgSTS37 MgSTS34 MgSTS509 MgSTS251 MgSTS351 MgSTS293 MgSTS574B MgSTS574a MgSTS579 MgSTS535 MgSTS539 MgSTS609 MgSTS425 MgSTS435 MgSTS383 MgSTS441 MgSTS511 MgSTS214 </p>
+
+<p>Group 4 : 40 markers
+    AA384 AA166C AA66 BA210 BA113 BB208 CA497 CA415 CA399 CA384 CA297 CA233 CB329 CB257 BD411 BD243 BD239 BD130 BD115 AA346C AA374C BA279C CA183C AAT367 BC512 BC321 BC216 BC192 CC531 CC270 MgSTS132 MgSTS228 MgSTS234 MgSTS455 MgSTS262 MgSTS362 MgSTS492 MgSTS347 MgSTS477 MgSTS542B </p>
+
+<p>Group 5 : 21 markers
+    AA378 AA268 AA163 BA69 BB210 BB186 CA264 CA226 CB230 BD316C BD173 AA118C AA454C BC506 CC342 CC124 MgSTS40 MgSTS245 MgSTS282A MgSTS255 MgSTS586 </p>
+
+<p>Group 6 : 51 markers
+    AA371C AA311 AA277 AA270 AA158 BA222 BA117 CA283 CA152C CB333 BD179 BD169 BD55 AAT230 AAT300 BC392 BC243 BC125 CC457 CC381 CC262 CC126 CC171C MgSTS21 MgSTS25 MgSTS22 MgSTS28 MgSTS105 MgSTS120 MgSTS58 MgSTS229 MgSTS323 MgSTS508 MgSTS529 MgSTS480 MgSTS426 MgSTS453 MgSTS456 MgSTS430 MgSTS314 MgSTS320 MgSTS606 MgSTS504A MgSTS504B MgSTS545 MgSTS542A MgSTS459 MgSTS220 MgSTS467 MgSTS431 MgSTS440 </p>
+
+<p>Group 7 : 32 markers
+    AA246 BA372 BA314 BA158 BB167 CA305 CA210 CA122 CB272 BD189C AAT217 AAT39 AAT211 AAT296 CYCB AAT242 CC450 CC359 CC338C MgSTS59 MgSTS69 MgSTS31 MgSTS76 MgSTS330 MgSTS381 MgSTS571 MgSTS590 MgSTS537 MgSTS538 MgSTS563 MgSTS504C MgSTS621 </p>
+
+<p>Group 8 : 26 markers
+    AA167 AA95 BA445 BA400 BA311 BB218 BB176 CA261 CA217 CA196 CA167 CB115 BA396C AAT222 BC108 BC83 CC540 CC402 LFY MgSTS468 MgSTS638 MgSTS536 MgSTS558 MgSTS611 MgSTS600 MgSTS470 </p>
+
+<p>Group 9 : 36 markers
+    AA137 BB216 CA267 CA150 CA75 BD371 BD251 AAT265 BC542 BC80 CC320 CC93 AP3 MgSTS17 MgSTS16 MgSTS18 MgSTS24 MgSTS29 MgSTS38 MgSTS133 MgSTS527 MgSTS520 MgSTS341 MgSTS350 MgSTS348 MgSTS491 MgSTS500 MgSTS398 MgSTS263 MgSTS578 MgSTS583 MgSTS631 MgSTS562 MgSTS632 MgSTS494 MgSTS483 </p>
+
+<p>Group 10 : 26 markers
+    BA449 BA387 BA196 BB124 BD340 BD100 BC374 BC526C CC61 CC53 MgSTS20 MgSTS19 MgSTS26 MgSTS91 MgSTS93 CYCA aat356 MgSTS87 MgSTS360 MgSTS358 MgSTS344 MgSTS471 MgSTS380 MgSTS561 MgSTS598 MgSTS620 </p>
+
+<p>Group 11 : 29 markers
+    BA394 BA175 BB182 CA378 CA140 CB216 BD242 BD143 AA296C BA245C AAT233 AAT272 AAT308 AAT364 BC546 BC478 BC388 BC376 BC330 BC266 BC219 CC149 CC114 MgSTS36 MgSTS437 MgSTS113 MgSTS282B MgSTS548 MgSTS438 </p>
+
+<p>Group 12 : 21 markers
+    BA334 BA145 BB198 CA315 CB172 CB126 CB55 CB263C AAT240 BC199 CC150 MgSTS55 MgSTS45 MgSTS11 MgSTS68 MgSTS326 MgSTS419 MgSTS577 MgSTS104 MgSTS622 MgSTS599</p>
+
+<p>Em cada grupo todos os marcadores não significativos depois da correção de Bonferroni foram removidos (17 dominantes e 45 codominantes). Em seguida, para ordenar os marcadores dentro de cada grupo foi utilizado Kosambi (Kosambi, 1944) que é capaz de converter a fração de recombinação entre os marcadores em cM com a implementação do algoritmo RECORD (Van Os et al., 2005). Com o algoritmo RIPPLE ordens alternativas foram checadas com base em uma janela de 4 marcadores e LOD <em>score</em> 3. </p>
+
+<p>Após verificar a qualidade de mapeamento e ordenação foi necessário que o grupo 3 fosse analisado novamente com diferentes LOD <em>scores</em> (7) e fração de recombinação (0,231). Sendo assim, o grupo 3 foi divido em mais dois grupos , totalizando 14 grupos. </p>
+
+<p><a href="http://gcmmoreira.github.io/heat_group3/">Grupo 3 - clique aqui</a></p>
+
+<p>Para os 14 grupos foram obtidos os seguintes gráficos <em>heatmap</em>, com fração de recombinação e LOD <em>score</em>.</p>
+
+<p><a href="http://gcmmoreira.github.io/heatplots_groups/">14 grupos - clique aqui</a></p>
+
+<p>Como os mapas gerados não tinham boa visualização foi utilizado o MapChart (Voorrips, 2002) para criar um mapa de melhor resolução com os 14 grupos.</p>
+
+<p><a href="http://thagodoy.github.io/mapadebaixaqualidade/">Mapa de baixa qualidade - clique aqui</a></p>
+
+<p><a href="http://gcmmoreira.github.io/mapa_genetico/">Mapa genético MapChart - clique aqui</a></p>
+
+<p>Os comandos utilizados no RStudio estão no link a seguir:</p>
+
+<p><a href="http://gcmmoreira.github.io/commands/">Comandos RStudio - clique aqui</a></p>
+
+<p><strong>Referências</strong></p>
+
+<p>Kosambi, D. D. (1944) The estimation of map distance from recombination values. Annuaire of Eugenetics 12: 172-175.</p>
+
+<p>Margarido, G. R. A., A. P. Souza and A. A. F. Garcia. (2007) OneMap: software for genetic mapping in outcrossing species. Hereditas 144: 78-79.</p>
+
+<p>Van Os H., Stam P., Visser R. G. F, Van Eck H. J (2005) RECORD: a novel method for ordering loci on a genetic linkage map. Theor Appl Genet 112: 30-40.</p>
+
+<p>Voorrips, R. E. (2002) MapChart: Software for the graphical presentation of linkage maps and QTLs. The Journal of Heredity 93: 77-78.</p>
+
+<p>Wu, R., Ma, C.-X., Painter, I. and Zeng, Z.-B. (2002) Simultaneous maximum likelihood estimation of linkage and linkage phases in outcrossing species. Theoretical Population Biology 61: 349-363.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ThaGodoy/analisesmapeamentogenetico">Análises do Mapeamento Genético</a> is maintained by <a href="https://github.com/ThaGodoy">ThaGodoy</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
